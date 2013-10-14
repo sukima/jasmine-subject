@@ -1,0 +1,13 @@
+{
+  "name": "Jasmine-Subject",
+  "description": "A Jasmine plugin to add subject/its style.",
+  "author": "Devin Weaver (@sukima)",
+  "version": "0.0.1",
+  "scripts": {
+    "test": "jasmine-node --coffee spec"
+  },
+  "devDependencies": {
+    "jasmine-node": "~1.11.0",
+    "coffee-script": "~1.6.3"
+  }
+}
