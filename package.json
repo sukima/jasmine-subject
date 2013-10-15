@@ -6,8 +6,10 @@
   "scripts": {
     "test": "jasmine-node --coffee spec"
   },
+  "dependencies": {
+    "jasmine-node": "~1.11.0"
+  },
   "devDependencies": {
-    "jasmine-node": "~1.11.0",
     "coffee-script": "~1.6.3"
   }
 }
