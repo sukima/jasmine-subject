@@ -9,11 +9,23 @@ describe "Jasmine-Subject", ->
 
   describe "#subject", ->
 
-    it "should take a function", ->
-      expect( -> subject(->@testObject) ).not.toThrow()
+    describe "(unnamed)", ->
 
-    it "should take an object", ->
-      expect( -> subject(@testObject) ).not.toThrow()
+      it "should take a function", ->
+        expect( -> subject(->@testObject) ).not.toThrow()
+
+      it "should take an object", ->
+        expect( -> subject(@testObject) ).not.toThrow()
+
+    describe "(named)", ->
+
+      it "should take a function", ->
+        subject("test_contexted_object", ->@testObject)
+        expect( @test_contexted_object ).toBeDefined()
+
+      it "should take an object", ->
+        subject("test_contexted_object", @testObject)
+        expect( @test_contexted_object ).toBeDefined()
 
   describe "#its", ->
 
